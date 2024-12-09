@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Счетчик посещений на PHP</title>
+    <title>Счетчик посещений третьей страницы</title>
 </head>
 <body>
 <?php
@@ -12,7 +12,7 @@ if (!isset($_SESSION['count'])) {
 }
 // Увеличиваем счетчик посещений
 $_SESSION['count']++;
-
+// Проверка на кратность посещения третьей страницы
 if ($_SESSION['count'] % 3 == 0) {
     header('Location: page4.php');
 }
@@ -22,22 +22,3 @@ echo "<p>Вы посещали третью страницу ".$_SESSION['count'
 ?>
 </body>
 </html>
-
-
-
-<?php
-////ob_start();
-//// Редирект на другую страницу
-//header('Location: page4.php');
-////ob_end_flush();
-//exit();
-//
-//
-//
-//
-//session_start();
-//if ( !isset( $_SESSION['count'] ) )
-//    $_SESSION['count'] = 0;
-//$_SESSION['count']++;
-//
-//?>
