@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>PHP задание</title>
+    <title>Окно стандартного сообщения о несуществующем URL</title>
 </head>
 
 <body>

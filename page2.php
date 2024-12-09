@@ -1,3 +1,10 @@
+<html>
+<head>
+    <title>Сохранение файла на локальный компьютер</title>
+</head>
+
+<body>
+
 <?php
 
 $text = $_GET['text'];
@@ -15,3 +22,7 @@ header("Content-Transfer-Encoding: Binary");
 header('Content-Length: '.filesize('$attachment_location'));
 header("Content-Disposition: attachment; filename=file.txt");
 readfile('$attachment_location');
+
+?>
+</body>
+</html>
