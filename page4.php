@@ -7,7 +7,11 @@
 <?php
     session_start();
     echo "Вы на четвертой странице";
-    echo "<p>Вы посещали третью страницу ".$_SESSION['count']." раз(а).</p>";
+    if (!empty($_SESSION['count'])) {
+        echo "<p>Вы посещали третью страницу ".$_SESSION['count']." раз(а).</p>";
+    } else {
+        echo "<p>Вы не посещали третью страницу.</p>";
+    }
 ?>
 </body>
 </html>
